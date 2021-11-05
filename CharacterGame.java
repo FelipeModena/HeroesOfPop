@@ -7,10 +7,12 @@ class Guerreiro extends Persona {
 }
 
 class Mago extends Persona {
+
     public Mago() {
         attack = 20;
         defense = 10;
         lifePoints = 200;
+
     }
 }
 
@@ -24,7 +26,7 @@ class Arqueiro extends Persona {
 
 class Persona {
     String name;
-    int weapon;
+    Boolean weapon;
     int attack;
     int defense;
     int lifePoints;
