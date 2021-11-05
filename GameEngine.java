@@ -93,7 +93,6 @@ public class GameEngine {
                 break;
             }
         } while (statusCreation > 3);
-        // characters.get(characters.size()-1);
         
     }
 }
