@@ -1,45 +1,51 @@
-import java.util.List;
 
 class Guerreiro extends Persona {
-    public Guerreiro() {
+    public Guerreiro(String charName, int weaponAttack, int weaponDefence) {
+        name = charName;
         attack = 30;
         defence = 20;
         lifePoints = 180;
+        weapon = new Weapon(weaponAttack, weaponDefence);
+
     }
 }
 
 class Mago extends Persona {
 
-    public Mago() {
+    public Mago(String charName, int weaponAttack, int weaponDefence) {
+        name = charName;
         attack = 20;
         defence = 10;
         lifePoints = 200;
+        weapon = new Weapon(weaponAttack, weaponDefence);
 
     }
 }
 
 class Arqueiro extends Persona {
-    public Arqueiro() {
+    public Arqueiro(String charName, int weaponAttack, int weaponDefence) {
+        name = charName;
         attack = 20;
         defence = 30;
         lifePoints = 160;
+        weapon = new Weapon(weaponAttack, weaponDefence);
     }
 }
 
 class Persona {
     String name;
-    Boolean weapon;
     int attack;
     int defence;
     int lifePoints;
-    List<Weapon> weaponSlist;
+    Weapon weapon;
 }
 
-/**
- * CharacterGame
- */
 class Weapon {
-    int attack,defence;
-        Object 
-    
+    int damage = 0, defence = 0;
+
+    Weapon(int atk, int def) {
+        damage = atk;
+        defence = def;
+    }
+
 }
