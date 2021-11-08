@@ -1,7 +1,9 @@
+import java.util.List;
+
 class Guerreiro extends Persona {
     public Guerreiro() {
         attack = 30;
-        defense = 20;
+        defence = 20;
         lifePoints = 180;
     }
 }
@@ -10,7 +12,7 @@ class Mago extends Persona {
 
     public Mago() {
         attack = 20;
-        defense = 10;
+        defence = 10;
         lifePoints = 200;
 
     }
@@ -19,7 +21,7 @@ class Mago extends Persona {
 class Arqueiro extends Persona {
     public Arqueiro() {
         attack = 20;
-        defense = 30;
+        defence = 30;
         lifePoints = 160;
     }
 }
@@ -28,6 +30,16 @@ class Persona {
     String name;
     Boolean weapon;
     int attack;
-    int defense;
+    int defence;
     int lifePoints;
+    List<Weapon> weaponSlist;
+}
+
+/**
+ * CharacterGame
+ */
+class Weapon {
+    int attack,defence;
+        Object 
+    
 }
