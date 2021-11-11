@@ -7,21 +7,15 @@ public class GameEngine {
     public List<Persona> characters = new ArrayList<Persona>();
 
     void startGameLayout() {
-        System.out.println(
-                "HHH    HH EEEEEE  RRRRRRRRR         OOO         EEEEEEE       SSSSSS    OOOOOOOOO      PPppppppp");
-        System.out.println(
-                "HHH    HH EEEEEE  RRRR     RR    OO  (I)  OO    EEEEEEE     SSSSSSS     OO  OO0OO000OO PP    pppp");
-        System.out.println(
-                "HHHHHHHHH EE      RRRR     RRR  OOO  (I)   OOO  EEE       SSSSSS        OO  OO OO   OO PP    ppp");
-        System.out.println(
-                "HHHHHHHHH EEEEER  RRRRR    RR   OOO  (I)   OOO  EEEEEEE SSSSS           OO  OO OO   OO PP   pp");
-        System.out.println(
-                "HHHHHHHHH EEEEER  RRRRR   R     OOO  (I)   OOO  EEEEEEE  SSSSS          OO  OO OO   OO PP pp");
+        System.out.println("HHH    HH EEEEEE  RRRRRRRRR         OOO         EEEEEEE       SSSSSS    OOOOOOOOO      PPppppppp");
+        System.out.println("HHH    HH EEEEEE  RRRR     RR    OO  (I)  OO    EEEEEEE     SSSSSSS     OO  OO0OO000OO PP    pppp");
+        System.out.println("HHHHHHHHH EE      RRRR     RRR  OOO  (I)   OOO  EEE       SSSSSS        OO  OO OO   OO PP    ppp");
+        System.out.println("HHHHHHHHH EEEEER  RRRRR    RR   OOO  (I)   OOO  EEEEEEE SSSSS           OO  OO OO   OO PP   pp");
+        System.out.println("HHHHHHHHH EEEEER  RRRRR   R     OOO  (I)   OOO  EEEEEEE  SSSSS          OO  OO OO   OO PP pp");
         System.out.println("HHHHHHHHH EE      RRRRRRR        OO  (I)  OO    EE         SSSSS        OO  OO OO   OO PP");
         System.out.println("HHH    HH EEEEEEEEEEEE  RRR       OO (I) OO     EEEEEE   SSSSS          OO  OO00OO00OO PP");
         System.out.println("HHH    HH EEEEEEEEEEEE   RRRR        OOO         EEEEEE SSSS            OOOOOOOOO      PP");
 
-        System.out.println("");
         System.out.println("");
         System.out.println("");
 
@@ -70,7 +64,7 @@ public class GameEngine {
                 return;
 
             default:
-                System.out.println("Não existe essa opção nesse mundo, tente outra por favor \n\n");
+                System.out.println("Não existe essa opção nesse mundo, tente outra vez por favor \n\n");
                 break;
             }
         }
@@ -82,7 +76,7 @@ public class GameEngine {
         int arma = -1;
         String charName = "NomePadrao";
         System.out.println("\n");
-        System.out.println("1-Guerriro");
+        System.out.println("1-Guerreiro");
         System.out.println("2-Mago");
         System.out.println("3-Arqueiro");
 
@@ -131,17 +125,17 @@ public class GameEngine {
     private int getWeapon(Scanner scanner, int classe, int arma) {
         switch (classe) {
         case 1:
-            System.out.println("Espada");
-            System.out.println("Machado");
+            System.out.println("1-Espada");
+            System.out.println("2-Machado");
             break;
         case 2:
-            System.out.println("Varinha");
-            System.out.println("Cajado");
+            System.out.println("1-Varinha");
+            System.out.println("2-Cajado");
             break;
 
         case 3:
-            System.out.println("Arco longo");
-            System.out.println("Belastra");
+            System.out.println("1-Arco longo");
+            System.out.println("2-Belastra");
             break;
 
         }

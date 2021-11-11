@@ -1,3 +1,20 @@
+class Persona {
+    String name;
+    int attack;
+    int defence;
+    int lifePoints;
+    Weapon weapon;
+}
+
+class Weapon {
+    int damage = 0;
+    int defence = 0;
+
+    Weapon(int atk, int def) {
+        damage = atk;
+        defence = def;
+    }
+}
 
 class Guerreiro extends Persona {
     public Guerreiro(String charName, int weaponAttack, int weaponDefence) {
@@ -6,9 +23,9 @@ class Guerreiro extends Persona {
         defence = 20;
         lifePoints = 180;
         weapon = new Weapon(weaponAttack, weaponDefence);
-
     }
 }
+
 
 class Mago extends Persona {
 
@@ -32,20 +49,3 @@ class Arqueiro extends Persona {
     }
 }
 
-class Persona {
-    String name;
-    int attack;
-    int defence;
-    int lifePoints;
-    Weapon weapon;
-}
-
-class Weapon {
-    int damage = 0, defence = 0;
-
-    Weapon(int atk, int def) {
-        damage = atk;
-        defence = def;
-    }
-
-}
