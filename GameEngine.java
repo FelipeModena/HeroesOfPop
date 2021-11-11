@@ -32,18 +32,21 @@ public class GameEngine {
     private void mainMenu() {
         String gameStatus = "0";
         Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < 3; i++) {
+            characters.add(new Guerreiro("Gueirro" + i, 10, 15));
+        }
         while (Integer.parseInt(gameStatus) != 3) {
 
             System.out.println("Personagens criados atualmente: " + characters.size());
             for (Persona object : characters) {
                 System.out.println(object.getClass());
-                System.out.println("Nome: "+object.name);
-                System.out.println("Ataque: "+object.attack);
-                System.out.println("Defesa:"+ object.defence);
-                System.out.println("Pontos de vida: "+object.lifePoints);
-                System.out.println("Pontos de vida: "+object.lifePoints);
-                System.out.println("Defesa de arma: "+object.weapon.defence);
-                System.out.println("Dano de arma: "+object.weapon.damage);
+                System.out.println("Nome: " + object.name);
+                System.out.println("Ataque: " + object.attack);
+                System.out.println("Defesa:" + object.defence);
+                System.out.println("Pontos de vida: " + object.lifePoints);
+                System.out.println("Defesa de arma: " + object.weapon.defence);
+                System.out.println("Dano de arma: " + object.weapon.damage);
                 System.out.println("------>");
 
             }
@@ -99,7 +102,7 @@ public class GameEngine {
             }
             break;
         case 2:
-        System.out.println("Mago");
+            System.out.println("Mago");
             if (arma == 1) {
                 characters.add(new Mago(charName, 16, 9));
             } else {
@@ -107,8 +110,8 @@ public class GameEngine {
             }
             break;
         case 3:
-        System.out.println("Archer");
-        if (arma == 1) {
+            System.out.println("Archer");
+            if (arma == 1) {
                 characters.add(new Arqueiro(charName, 12, 13));
             } else {
                 characters.add(new Arqueiro(charName, 15, 10));
