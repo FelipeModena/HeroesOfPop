@@ -7,17 +7,21 @@ public class GameEngine {
     public List<Persona> characters = new ArrayList<Persona>();
 
     void startGameLayout() {
-        System.out.println("HHH    HH EEEEEE  RRRRRRRRR         OOO         EEEEEEE       SSSSSS    OOOOOOOOO      PPppppppp");
-        System.out.println("HHH    HH EEEEEE  RRRR     RR    OO  (I)  OO    EEEEEEE     SSSSSSS     OO  OO0OO000OO PP    pppp");
-        System.out.println("HHHHHHHHH EE      RRRR     RRR  OOO  (I)   OOO  EEE       SSSSSS        OO  OO OO   OO PP    ppp");
-        System.out.println("HHHHHHHHH EEEEER  RRRRR    RR   OOO  (I)   OOO  EEEEEEE SSSSS           OO  OO OO   OO PP   pp");
-        System.out.println("HHHHHHHHH EEEEER  RRRRR   R     OOO  (I)   OOO  EEEEEEE  SSSSS          OO  OO OO   OO PP pp");
+        System.out.println(
+                "HHH    HH EEEEEE  RRRRRRRRR         OOO         EEEEEEE       SSSSSS    OOOOOOOOO      PPppppppp");
+        System.out.println(
+                "HHH    HH EEEEEE  RRRR     RR    OO  (I)  OO    EEEEEEE     SSSSSSS     OO  OO0OO000OO PP    pppp");
+        System.out.println(
+                "HHHHHHHHH EE      RRRR     RRR  OOO  (I)   OOO  EEE       SSSSSS        OO  OO OO   OO PP    ppp");
+        System.out.println(
+                "HHHHHHHHH EEEEER  RRRRR    RR   OOO  (I)   OOO  EEEEEEE SSSSS           OO  OO OO   OO PP   pp");
+        System.out.println(
+                "HHHHHHHHH EEEEER  RRRRR   R     OOO  (I)   OOO  EEEEEEE  SSSSS          OO  OO OO   OO PP pp");
         System.out.println("HHHHHHHHH EE      RRRRRRR        OO  (I)  OO    EE         SSSSS        OO  OO OO   OO PP");
         System.out.println("HHH    HH EEEEEEEEEEEE  RRR       OO (I) OO     EEEEEE   SSSSS          OO  OO00OO00OO PP");
         System.out.println("HHH    HH EEEEEEEEEEEE   RRRR        OOO         EEEEEE SSSS            OOOOOOOOO      PP");
 
-        System.out.println("");
-        System.out.println("");
+        System.out.println("\n\n");
 
         mainMenu();
 
@@ -27,20 +31,14 @@ public class GameEngine {
         String gameStatus = "0";
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < 3; i++) {
-            characters.add(new Guerreiro("Gueirro" + i, 10, 15));
-        }
         while (Integer.parseInt(gameStatus) != 3) {
-
             System.out.println("Personagens criados atualmente: " + characters.size());
             for (Persona object : characters) {
                 System.out.println(object.getClass());
                 System.out.println("Nome: " + object.name);
-                System.out.println("Ataque: " + object.attack);
-                System.out.println("Defesa:" + object.defence);
                 System.out.println("Pontos de vida: " + object.lifePoints);
-                System.out.println("Defesa de arma: " + object.weapon.defence);
-                System.out.println("Dano de arma: " + object.weapon.damage);
+                System.out.println("Ataque (padrao e arma): " + (object.attack + object.weapon.damage));
+                System.out.println("Defesa (padrao e arma):" + (object.defence + object.weapon.defence));
                 System.out.println("------>");
 
             }

@@ -4,6 +4,7 @@ class Persona {
     int defence;
     int lifePoints;
     Weapon weapon;
+    boolean choiceDefence;
 }
 
 class Weapon {
