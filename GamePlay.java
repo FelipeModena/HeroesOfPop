@@ -15,13 +15,12 @@ public class GamePlay {
             dragonAttack(characters, tiamat, rand);
             homiesAttack(characters, tiamat);
             printStatusFight(characters, tiamat);
-            System.out.println("\n\n TAMANHO LISTA     " + characters.size());
         }
 
         if (characters.size() == 0) {
-            System.out.println("DRAGAO VENCEU");
+            System.out.println("DRAGAO VENCEU\n");
         } else {
-            System.out.println("EQUIPE VENCEU");
+            System.out.println("EQUIPE VENCEU\n");
         }
 
     }

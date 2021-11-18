@@ -153,6 +153,10 @@ public class GameEngine {
     }
 
     private void gameplay() {
+        if (characters.size() <= 0) {
+            System.out.println("Você não possui heróis para começar uma aventura!\n");
+            return;
+        }
         GamePlay gamePlay = new GamePlay();
         gamePlay.startGame(characters);
     }
